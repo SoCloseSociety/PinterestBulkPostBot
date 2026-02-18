@@ -61,7 +61,7 @@
   <!-- SoClose branding -->
   <g transform="translate(195, 245)">
     <text font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" fill="#c5c1b9" opacity="0.7">Built by</text>
-    <text x="50" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" fill="#575ECF" font-weight="700" filter="url(#glow)">SoClose</text>
+    <text x="50" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" fill="#FFFFFF" font-weight="700">SoClose</text>
     <text x="100" font-family="system-ui, sans-serif" font-size="11" fill="#c5c1b9" opacity="0.5">Digital Innovation Through Automation &amp; AI</text>
   </g>
 </svg>
