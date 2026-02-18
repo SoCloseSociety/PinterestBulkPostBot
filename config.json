@@ -1,0 +1,7 @@
+{
+    "board_name": "",
+    "login_wait_seconds": 60,
+    "delay_between_pins": 2,
+    "images_folder": "bulk_post_pinterest",
+    "headless": false
+}
