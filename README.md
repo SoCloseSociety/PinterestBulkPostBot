@@ -1,17 +1,19 @@
-<h1 align="center">Pinterest Bulk Post Bot</h1>
+<p align="center">
+  <img src="assets/banner.svg" alt="Pinterest Bulk Post Bot" width="900">
+</p>
 
 <p align="center">
   <strong>Automate bulk posting of images to Pinterest - Upload hundreds of pins in minutes instead of hours.</strong>
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
-  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.8+"></a>
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg" alt="Platform">
-  <a href="https://www.selenium.dev/"><img src="https://img.shields.io/badge/Selenium-4.20%2B-orange.svg" alt="Selenium"></a>
-  <a href="https://github.com/SoCloseSociety/PinterestBulkPostBot/stargazers"><img src="https://img.shields.io/github/stars/SoCloseSociety/PinterestBulkPostBot?style=social" alt="GitHub Stars"></a>
-  <a href="https://github.com/SoCloseSociety/PinterestBulkPostBot/issues"><img src="https://img.shields.io/github/issues/SoCloseSociety/PinterestBulkPostBot" alt="Issues"></a>
-  <a href="https://github.com/SoCloseSociety/PinterestBulkPostBot/network/members"><img src="https://img.shields.io/github/forks/SoCloseSociety/PinterestBulkPostBot?style=social" alt="Forks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-575ECF?style=flat-square" alt="License: MIT"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.8%2B-575ECF?style=flat-square&logo=python&logoColor=white" alt="Python 3.8+"></a>
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-575ECF?style=flat-square" alt="Platform">
+  <a href="https://www.selenium.dev/"><img src="https://img.shields.io/badge/Selenium-4.20%2B-575ECF?style=flat-square&logo=selenium&logoColor=white" alt="Selenium"></a>
+  <a href="https://github.com/SoCloseSociety/PinterestBulkPostBot/stargazers"><img src="https://img.shields.io/github/stars/SoCloseSociety/PinterestBulkPostBot?style=flat-square&color=575ECF" alt="GitHub Stars"></a>
+  <a href="https://github.com/SoCloseSociety/PinterestBulkPostBot/issues"><img src="https://img.shields.io/github/issues/SoCloseSociety/PinterestBulkPostBot?style=flat-square&color=575ECF" alt="Issues"></a>
+  <a href="https://github.com/SoCloseSociety/PinterestBulkPostBot/network/members"><img src="https://img.shields.io/github/forks/SoCloseSociety/PinterestBulkPostBot?style=flat-square&color=575ECF" alt="Forks"></a>
 </p>
 
 <p align="center">
@@ -205,6 +207,8 @@ PinterestBulkPostBot/
 ├── requirements.txt        # Python dependencies
 ├── bulk_post_pinterest/    # Default folder for images to upload
 │   └── (your images here)
+├── assets/
+│   └── banner.svg          # Project banner
 ├── LICENSE                 # MIT License
 ├── README.md               # This file
 ├── CONTRIBUTING.md         # Contribution guidelines
@@ -282,7 +286,7 @@ A demo video (`watch_me.mp4`) is included in the repository. Clone the project a
 
 | Feature | Pinterest Bulk Post Bot | Manual Posting | Tailwind | Buffer |
 |---------|------------------------|----------------|----------|--------|
-| Price | Free | Free | $14.99/mo | $15/mo |
+| Price | **Free** | Free | $14.99/mo | $15/mo |
 | Bulk upload | Yes | No | Limited | Limited |
 | Custom metadata per pin | Yes (CSV) | Yes | Yes | Yes |
 | Open source | Yes | N/A | No | No |
@@ -311,8 +315,21 @@ This tool is provided for **educational and personal productivity purposes only*
 ---
 
 <p align="center">
-  If this project helps you, please give it a <strong>star</strong>! It helps others discover this tool.<br><br>
+  <strong>If this project helps you, please give it a star!</strong><br>
+  It helps others discover this tool.<br><br>
   <a href="https://github.com/SoCloseSociety/PinterestBulkPostBot">
-    <img src="https://img.shields.io/github/stars/SoCloseSociety/PinterestBulkPostBot?style=for-the-badge&logo=github" alt="Star this repo">
+    <img src="https://img.shields.io/github/stars/SoCloseSociety/PinterestBulkPostBot?style=for-the-badge&logo=github&color=575ECF" alt="Star this repo">
   </a>
+</p>
+
+<br>
+
+<p align="center">
+  <sub>Built with purpose by <a href="https://soclose.co"><strong>SoClose</strong></a> &mdash; Digital Innovation Through Automation & AI</sub><br>
+  <sub>
+    <a href="https://soclose.co">Website</a> &bull;
+    <a href="https://linkedin.com/company/soclose-agency">LinkedIn</a> &bull;
+    <a href="https://twitter.com/SoCloseAgency">Twitter</a> &bull;
+    <a href="mailto:hello@soclose.co">Contact</a>
+  </sub>
 </p>

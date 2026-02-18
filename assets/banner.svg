@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b1b1b"/>
+      <stop offset="100%" style="stop-color:#2a2a3d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#575ECF"/>
+      <stop offset="100%" style="stop-color:#7B80E0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" rx="16" fill="url(#bg)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="780" cy="60" r="120" fill="#575ECF" opacity="0.06"/>
+  <circle cx="120" cy="240" r="80" fill="#575ECF" opacity="0.04"/>
+  <rect x="50" y="260" width="800" height="2" rx="1" fill="url(#accent)" opacity="0.3"/>
+
+  <!-- Pinterest icon stylized -->
+  <g transform="translate(60, 70)">
+    <circle cx="55" cy="55" r="52" fill="none" stroke="#575ECF" stroke-width="3" opacity="0.8"/>
+    <path d="M55 20c-20 0-35 15-35 34 0 13 7 25 18 31-1-4-1-9 0-13l4-15s-2-4-2-9c0-8 5-14 11-14 5 0 8 4 8 8 0 5-3 12-5 19-1 5 3 10 8 10 10 0 18-11 18-26 0-14-10-23-24-23-16 0-26 12-26 25 0 5 2 10 4 13 0 2 1 2 0 3l-1 6c0 1-1 2-3 1C42 98 36 87 36 76c0-18 13-34 38-34 20 0 35 14 35 33 0 20-12 35-30 35-6 0-11-3-13-7l-4 14c-1 5-5 11-7 15 5 2 11 3 17 3 25 0 45-20 45-45S80 20 55 20z" fill="#575ECF" opacity="0.9"/>
+  </g>
+
+  <!-- Title -->
+  <text x="195" y="105" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="42" font-weight="700" fill="#FFFFFF" letter-spacing="-1">Pinterest Bulk Post Bot</text>
+
+  <!-- Subtitle -->
+  <text x="195" y="140" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" fill="#c5c1b9">Automate bulk posting of images to Pinterest</text>
+
+  <!-- Feature pills -->
+  <g transform="translate(195, 160)">
+    <rect x="0" y="0" width="110" height="28" rx="14" fill="#575ECF" opacity="0.2"/>
+    <text x="55" y="19" font-family="system-ui, sans-serif" font-size="12" fill="#7B80E0" text-anchor="middle" font-weight="600">Cross-Platform</text>
+
+    <rect x="120" y="0" width="100" height="28" rx="14" fill="#575ECF" opacity="0.2"/>
+    <text x="170" y="19" font-family="system-ui, sans-serif" font-size="12" fill="#7B80E0" text-anchor="middle" font-weight="600">Bulk Upload</text>
+
+    <rect x="230" y="0" width="100" height="28" rx="14" fill="#575ECF" opacity="0.2"/>
+    <text x="280" y="19" font-family="system-ui, sans-serif" font-size="12" fill="#7B80E0" text-anchor="middle" font-weight="600">CSV Support</text>
+
+    <rect x="340" y="0" width="110" height="28" rx="14" fill="#575ECF" opacity="0.2"/>
+    <text x="395" y="19" font-family="system-ui, sans-serif" font-size="12" fill="#7B80E0" text-anchor="middle" font-weight="600">Headless Mode</text>
+
+    <rect x="460" y="0" width="120" height="28" rx="14" fill="#575ECF" opacity="0.2"/>
+    <text x="520" y="19" font-family="system-ui, sans-serif" font-size="12" fill="#7B80E0" text-anchor="middle" font-weight="600">Free &amp; Open Source</text>
+  </g>
+
+  <!-- Tech stack -->
+  <text x="195" y="225" font-family="system-ui, sans-serif" font-size="13" fill="#dcdad5" opacity="0.6">Python  |  Selenium  |  BeautifulSoup  |  MIT License</text>
+
+  <!-- SoClose branding -->
+  <g transform="translate(195, 245)">
+    <text font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" fill="#c5c1b9" opacity="0.7">Built by</text>
+    <text x="50" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" fill="#575ECF" font-weight="700" filter="url(#glow)">SoClose</text>
+    <text x="100" font-family="system-ui, sans-serif" font-size="11" fill="#c5c1b9" opacity="0.5">Digital Innovation Through Automation &amp; AI</text>
+  </g>
+</svg>
