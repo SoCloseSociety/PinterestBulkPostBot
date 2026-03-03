@@ -153,7 +153,7 @@ def discover_images(folder_path):
 
 
 def create_driver(headless=False):
-    """Create and return a configured Chrome WebDriver."""
+    """Create and return a configured Chrome WebDriver with error handling."""
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
     options.add_argument("--disable-notifications")
@@ -166,9 +166,12 @@ def create_driver(headless=False):
     try:
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=options)
-    except Exception as exc:
+    except WebDriverException as exc:
         logger.error("Failed to start Chrome: %s", exc)
-        logger.info("Make sure Google Chrome is installed on your system.")
+        logger.info("Make sure Google Chrome is installed on your system and the correct version of chromedriver is available.")
+        sys.exit(1)
+    except Exception as exc:
+        logger.error("An unexpected error occurred while starting Chrome: %s", exc)
         sys.exit(1)
 
     return driver
