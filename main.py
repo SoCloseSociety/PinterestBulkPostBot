@@ -33,6 +33,7 @@ PINTEREST_PIN_BUILDER_URL = "https://www.pinterest.com/pin-builder/"
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".tiff"}
 DEFAULT_IMAGES_FOLDER = "bulk_post_pinterest"
 DEFAULT_CONFIG_FILE = "config.json"
+HEADLESS_MODE_FOR_PRODUCTION = True
 DEFAULT_TIMEOUT = 30  # seconds for WebDriverWait
 
 BANNER = """
@@ -157,7 +158,9 @@ def create_driver(headless=False):
     options = webdriver.ChromeOptions()
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
     options.add_argument("--disable-notifications")
-    options.add_argument("--start-maximized")
+    if headless or HEADLESS_MODE_FOR_PRODUCTION:
+        options.add_argument("--headless=new")
+        options.add_argument("--window-size=1920,1080")
 
     if headless:
         options.add_argument("--headless=new")
