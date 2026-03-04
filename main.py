@@ -128,7 +128,7 @@ def load_csv_metadata(csv_path):
                     }
         logger.info("Loaded metadata for %d images from %s", len(metadata), csv_path)
     except (csv.Error, ValueError, IOError) as exc:
-        logger.warning("Could not read CSV file (%s). Skipping.", exc)
+        logger.error("Error reading CSV file: %s", exc)
     return metadata
 
 
