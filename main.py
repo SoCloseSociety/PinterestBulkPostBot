@@ -28,12 +28,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 # Constants
 # ---------------------------------------------------------------------------
 
-PINTEREST_LOGIN_URL = "https://www.pinterest.com/login/"
-PINTEREST_PIN_BUILDER_URL = "https://www.pinterest.com/pin-builder/"
+PINTEREST_LOGIN_URL = os.getenv('PINTEREST_LOGIN_URL', 'https://www.pinterest.com/login/')
+PINTEREST_PIN_BUILDER_URL = os.getenv('PINTEREST_PIN_BUILDER_URL', 'https://www.pinterest.com/pin-builder/')
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".tiff"}
-DEFAULT_IMAGES_FOLDER = "bulk_post_pinterest"
-DEFAULT_CONFIG_FILE = "config.json"
-DEFAULT_TIMEOUT = 30  # seconds for WebDriverWait
+DEFAULT_IMAGES_FOLDER = os.getenv('DEFAULT_IMAGES_FOLDER', 'bulk_post_pinterest')
+DEFAULT_CONFIG_FILE = os.getenv('DEFAULT_CONFIG_FILE', 'config.json')
+DEFAULT_TIMEOUT = int(os.getenv('DEFAULT_TIMEOUT', 30))  # seconds for WebDriverWait
 
 BANNER = """
 \033[38;2;87;94;207m
