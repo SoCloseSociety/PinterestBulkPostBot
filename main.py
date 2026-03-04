@@ -34,6 +34,7 @@ SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".tiff
 DEFAULT_IMAGES_FOLDER = "bulk_post_pinterest"
 DEFAULT_CONFIG_FILE = "config.json"
 DEFAULT_TIMEOUT = 30  # seconds for WebDriverWait
+LOGIN_WAIT_SECONDS_DEFAULT = 60  # default login wait time in seconds
 
 BANNER = """
 \033[38;2;87;94;207m
@@ -87,6 +88,7 @@ def xpath_soup(element):
 def load_config(config_path):
     """Load configuration from a JSON file. Returns defaults if file not found."""
     defaults = {
+        "login_wait_seconds": LOGIN_WAIT_SECONDS_DEFAULT,
         "board_name": "",
         "login_wait_seconds": 60,
         "delay_between_pins": 2,
@@ -187,17 +189,17 @@ def progress_bar(current, total, width=40):
 # ---------------------------------------------------------------------------
 
 
-def wait_for_login(driver, timeout_seconds):
+def wait_for_login(driver, config):
     """Open Pinterest login page and wait for the user to log in."""
     driver.get(PINTEREST_LOGIN_URL)
     logger.info("Pinterest login page opened.")
     print()
     print("  Please log in to your Pinterest account in the browser window.")
-    print(f"  You have {timeout_seconds} seconds to complete login.")
+    print(f"  You have {config['login_wait_seconds']} seconds to complete login.")
     print()
 
     # Wait until the user navigates away from the login page
-    deadline = time.time() + timeout_seconds
+    deadline = time.time() + config['login_wait_seconds']
     while time.time() < deadline:
         current_url = driver.current_url
         if "/login" not in current_url:
