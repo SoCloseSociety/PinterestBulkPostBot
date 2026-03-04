@@ -133,23 +133,17 @@ def load_csv_metadata(csv_path):
 
 
 def discover_images(folder_path):
-    """Return a sorted list of image file paths in *folder_path*."""
+    """Return a generator of image file paths in *folder_path*."""
     folder = Path(folder_path)
     if not folder.is_dir():
         logger.error("Images folder not found: %s", folder)
         sys.exit(1)
 
-    images = sorted(
-        str(p) for p in folder.iterdir()
-        if p.is_file() and p.suffix.lower() in SUPPORTED_EXTENSIONS
-    )
+    for p in folder.iterdir():
+        if p.is_file() and p.suffix.lower() in SUPPORTED_EXTENSIONS:
+            yield str(p)
 
-    if not images:
-        logger.error("No images found in %s", folder)
-        sys.exit(1)
-
-    logger.info("Found %d image(s) in %s", len(images), folder)
-    return images
+    logger.info("Found images in %s", folder)
 
 
 def create_driver(headless=False):
